@@ -1,0 +1,17 @@
+@import './../../styles-config/styles.config.scss';
+
+.app-header {
+  width: 100%;
+  height: 60px;
+  outline: 2px solid black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+
+  .title {
+    color: $title-color;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+}

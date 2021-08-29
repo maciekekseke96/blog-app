@@ -1,12 +1,20 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+
+import { Route, Switch, withRouter } from 'react-router-dom';
+
 import { setPosts } from './redux/posts/posts.actions';
 import { getPosts } from './axios';
+
+import Header from './components/Header/Header';
+import MainPage from './pages/MainPage/MainPage';
+
 import './App.scss';
 
-const App = ({ setPosts }) => {
+const App = withRouter(({ setPosts, history }) => {
   useEffect(() => {
     setPostsAsync();
+    history.push('/posts');
   }, []);
 
   const setPostsAsync = async () => {
@@ -14,11 +22,14 @@ const App = ({ setPosts }) => {
     setPosts(postsList);
   };
   return (
-    <div className="aapp">
-      <h1>Blog App</h1>
+    <div className="app">
+      <Header />
+      <Switch>
+        <Route exact path="/posts" component={MainPage} />
+      </Switch>
     </div>
   );
-};
+});
 
 const mapDispatchToProps = (dispatch) => ({
   setPosts: (data) => {

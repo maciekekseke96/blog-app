@@ -1,0 +1,38 @@
+@import './../../styles-config/styles.config.scss';
+
+.post-item {
+  width: 60%;
+  outline: 2px solid black;
+  height: 150px;
+  font-family: $main-font;
+  padding: 5px;
+  margin: 15px;
+  position: relative;
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &__body {
+    font-size: 0.7rem;
+    margin-top: 10px;
+  }
+
+  .full-version-button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background: none;
+    padding: 10px;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      border: 2px solid black;
+    }
+  }
+}
