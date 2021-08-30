@@ -10,7 +10,7 @@ const PostsList = ({ posts }) => {
   return (
     <div className="posts-list-container">
       {posts.map(({ id, title, body }) => {
-        return <Post key={id} id={id} title={title} body={body} />;
+        return <Post key={id} id={id} title={title} body={body} withButton />;
       })}
     </div>
   );

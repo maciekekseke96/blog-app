@@ -1,5 +1,6 @@
 .main-content {
     width: 100%;
     min-height: 100px;
-    outline: 2px solid black;
+    border: 2px solid black;
+    border-top: none;
 }

@@ -1,0 +1,11 @@
+@import './../../styles-config/styles.config.scss';
+
+.post-comments {
+  margin: 10px 0 10px 5px;
+  font-family: $main-font;
+  &__header {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+}

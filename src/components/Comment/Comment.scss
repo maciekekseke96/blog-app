@@ -1,0 +1,17 @@
+@import './../../styles-config/styles.config.scss';
+
+.comment {
+    width: 50%;
+    font-family: $main-font;
+    margin: 10px 0 10px 5px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    &__body {
+        font-size: 0.8rem;
+    }
+}

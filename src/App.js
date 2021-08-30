@@ -8,6 +8,7 @@ import { getPosts } from './axios';
 
 import Header from './components/Header/Header';
 import MainPage from './pages/MainPage/MainPage';
+import PostDetails from './pages/PostDetails/PostDetails';
 
 import './App.scss';
 
@@ -26,6 +27,7 @@ const App = withRouter(({ setPosts, history }) => {
       <Header />
       <Switch>
         <Route exact path="/posts" component={MainPage} />
+        <Route path="/posts/:id" component={PostDetails} />
       </Switch>
     </div>
   );
