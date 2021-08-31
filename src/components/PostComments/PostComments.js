@@ -23,7 +23,7 @@ const PostComments = () => {
     <div className="post-comments">
       <p className="post-comments__header">Comments</p>
       <div className="post-comments__list">
-        {commentsToDisplay.length &&
+        {commentsToDisplay.length > 0 &&
           commentsToDisplay.map(({ id, name, body }) => {
             return <Comment key={id} name={name} body={body} />;
           })}
